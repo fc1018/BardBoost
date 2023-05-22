@@ -2,11 +2,7 @@ function sleep(ms) {
 	return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
-// async function fillQuery() {
-
-// }
-
-window.onload = function () {
+async function fillQuery() {
 	let url = new URL(document.location);
 	let question = url.searchParams.get('question');
 
@@ -14,7 +10,7 @@ window.onload = function () {
 		return;
 	}
 
-	// await sleep(200); // Time to load page
+	await sleep(200); // Time to load page
 
 	var input = document.getElementsByTagName('textarea')[0];
 	input.value = question;
@@ -25,4 +21,6 @@ window.onload = function () {
 
 	input.dispatchEvent(new Event('input', { bubbles: true }));
 	submit.click();
-};
+}
+
+fillQuery();
