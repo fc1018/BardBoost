@@ -11,8 +11,13 @@ async function fillQuery() {
 	}
 
 	// await sleep(200); // Time to load page
+	// if (document.getElementsByTagName('textarea')){
 
-	var input = document.getElementsByTagName('textarea');
+	// }
+	// else {
+	//   setTimeout()
+	// }
+	var input = document.getElementsByTagName('textarea')[0];
 	input.value = question;
 	input.addEventListener('load', doLoad);
 
