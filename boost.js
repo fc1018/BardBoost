@@ -11,23 +11,16 @@ async function fillQuery() {
 	}
 
 	// await sleep(200); // Time to load page
-	// if (document.getElementsByTagName('textarea')){
+	document.addEventListener('DOMContentLoaded', function () {
+		var input = document.getElementsByTagName('textarea')[0];
+		input.value = question;
 
-	// }
-	// else {
-	//   setTimeout()
-	// }
-	var input = document.getElementsByTagName('textarea')[0];
-	input.value = question;
-	input.addEventListener('load', doLoad);
-
-	function doLoad() {
 		submit = document.getElementsByClassName(
 			'mat-mdc-tooltip-trigger send-button mdc-icon-button mat-mdc-icon-button mat-primary mat-mdc-button-base gmat-mdc-button ng-star-inserted'
 		)[0];
 		input.dispatchEvent(new Event('input', { bubbles: true }));
 		submit.click();
-	}
+	});
 }
 
 fillQuery();
