@@ -2,7 +2,11 @@ function sleep(ms) {
 	return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
-async function fillQuery() {
+// async function fillQuery() {
+
+// }
+
+window.onload = function () {
 	let url = new URL(document.location);
 	let question = url.searchParams.get('question');
 
@@ -21,6 +25,4 @@ async function fillQuery() {
 
 	input.dispatchEvent(new Event('input', { bubbles: true }));
 	submit.click();
-}
-
-window.onload = fillQuery();
+};
