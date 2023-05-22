@@ -10,17 +10,19 @@ async function fillQuery() {
 		return;
 	}
 
-	await sleep(200); // Time to load page
+	// await sleep(200); // Time to load page
 
-	var input = document.getElementsByTagName('textarea')[0];
+	var input = document.getElementsByTagName('textarea');
 	input.value = question;
+	input.addEventListener('load', doLoad);
 
-	submit = document.getElementsByClassName(
-		'mat-mdc-tooltip-trigger send-button mdc-icon-button mat-mdc-icon-button mat-primary mat-mdc-button-base gmat-mdc-button ng-star-inserted'
-	)[0];
-
-	input.dispatchEvent(new Event('input', { bubbles: true }));
-	submit.click();
+	function doLoad() {
+		submit = document.getElementsByClassName(
+			'mat-mdc-tooltip-trigger send-button mdc-icon-button mat-mdc-icon-button mat-primary mat-mdc-button-base gmat-mdc-button ng-star-inserted'
+		)[0];
+		input.dispatchEvent(new Event('input', { bubbles: true }));
+		submit.click();
+	}
 }
 
 fillQuery();
