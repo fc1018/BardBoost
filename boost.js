@@ -10,8 +10,10 @@ async function fillQuery() {
 		return;
 	}
 
-	// await sleep(200); // Time to load page
-	document.addEventListener('DOMContentLoaded', function () {
+	document.onreadystatechange = () => {
+		if (document.readyState !== "complete") {
+			return
+		}
 		var input = document.getElementsByTagName('textarea')[0];
 		input.value = question;
 
@@ -20,7 +22,7 @@ async function fillQuery() {
 		)[0];
 		input.dispatchEvent(new Event('input', { bubbles: true }));
 		submit.click();
-	});
+	};
 }
 
 fillQuery();
