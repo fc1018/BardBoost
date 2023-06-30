@@ -1,5 +1,5 @@
 # BardBoost
-BardBoost is a javascript boost for the arc web browser that enhances your browsing experience with a shortcut to directly input questions into the new tab short cut 
+BardBoost is a javascript boost for the Google Bard beta that creates a shortcut to Bard from a new tab
 ## Installation
 To install BardBoost, follow these steps:
 
