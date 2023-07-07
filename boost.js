@@ -10,6 +10,7 @@ async function fillQuery() {
 	if (!question) {
 		return;
 	}
+	sleep(500);
 	//Document load status check
 	document.addEventListener("readystatechange", (event) => {
 		if (document.readyState === "interactive" || document.readyState === "complete") {
@@ -25,5 +26,4 @@ async function fillQuery() {
 		}
 	});
 }
-sleep(500);
 fillQuery();
