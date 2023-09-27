@@ -10,20 +10,22 @@ async function fillQuery() {
 	if (!question) {
 		return;
 	}
-	sleep(500);
 	//Document load status check
 	document.addEventListener("readystatechange", (event) => {
 		if (document.readyState === "interactive" || document.readyState === "complete") {
 			//Find text field and insert query
-			var input = document.getElementsByTagName("textarea")[0];
-			input.value = question;
-			//Find button
-			submit = document.getElementsByClassName(
-				"mat-mdc-tooltip-trigger send-button mdc-icon-button mat-mdc-icon-button mat-primary mat-mdc-button-base gmat-mdc-button ng-star-inserted")[0];
-			//Trigger button
-			input.dispatchEvent(new Event('input', { bubbles: true }));
-			submit.click();
+			var input = document.querySelector(
+				"body > chat-app > side-navigation > mat-sidenav-container > mat-sidenav-content > main > chat-window > div.chat-container.ng-tns-c1925132332-2.ng-star-inserted > div.bottom-container.ng-tns-c1925132332-2.ng-star-inserted > div.input-area-container.ng-tns-c1925132332-2 > input-area > div > div.text-input-field.ng-star-inserted > div > div > rich-textarea > div.ql-editor.textarea > p"
+			);
+			console.log(input);
+			input.textContent = question;
+			//Find button and click
+			document.querySelector(
+				"body > chat-app > side-navigation > mat-sidenav-container > mat-sidenav-content > main > chat-window > div.chat-container.ng-tns-c1925132332-2.ng-star-inserted > div.bottom-container.ng-tns-c1925132332-2.ng-star-inserted > div.input-area-container.ng-tns-c1925132332-2 > input-area > div > div.send-button-container.outer.ng-star-inserted > button > span.mat-mdc-button-touch-target"
+			).click();
 		}
 	});
 }
+fillQuery();
+// For some reason running the function a second time achieves the intended target
 fillQuery();
