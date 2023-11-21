@@ -17,7 +17,7 @@ To install BardBoost, follow these steps:
 7. Save site search
 
 ## Usage
-When the new tab shortcut is used in arc (cmd + T), the site search for 
+When the new tab shortcut <kbd>⌘ Command</kbd> <kbd>T</kbd> is used in arc, the site search for 
 google bard can be initialised using the "bard" keyword followed by tab. A query can then be entered and when submitted will open bard with the query
 automatically submitted.
 
