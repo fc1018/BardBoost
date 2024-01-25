@@ -22,7 +22,7 @@ google bard can be initialised using the "bard" keyword followed by tab. A query
 automatically submitted.
 
 ## Compatibility
-BardBoost is designed as a v2 boost so is compatible with arc version 0.105 or newer and has not been tested as a v1 legacy boost.
-
+BardBoost is designed as a v2 boost so is compatible with macOS Arc version 0.105 or newer and has not been tested as a v1 legacy boost.
+Arc for Windows version pending boost support.
 ## Feedback
 If you have any feedback, suggestions, or issues with BardBoost, please feel free to open an issue on GitHub.
