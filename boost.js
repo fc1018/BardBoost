@@ -4,7 +4,7 @@ async function queryEntry(question) {
 	input.textContent = question;
 	//Find button and click
 	setTimeout(() => {
-		let submit = document.querySelector("input-area > div > div:nth-child(3) > button");
+		let submit = document.querySelector("input-area > div > div:nth-child(4) > button");
 		submit.click();
 	}, 50);
 }
