@@ -9,11 +9,11 @@ To install BardBoost, follow these steps:
 4. Add a new site search
 5. Input the following entries:
    
-     Search Engine = "Google Bard"
+     Search Engine = `Google Bard`
    
-     Shortcut = "bard"
+     Shortcut = `bard`
    
-     URL with %s in place of query = "https://bard.google.com/?question=%s"
+     URL with %s in place of query = `https://bard.google.com/?question=%s`
 7. Save site search
 
 ## Usage
