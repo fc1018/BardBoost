@@ -1,3 +1,5 @@
+## If you're looking for a boost that works with Google Gemini please go [here](https://github.com/fc1018/GeminiBoost)
+
 # BardBoost
 BardBoost is a javascript boost for the Google Bard beta that creates a shortcut to Bard from a new tab.
 ## Installation
